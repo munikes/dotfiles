@@ -1,0 +1,10 @@
+[user]
+	name = mUniKeS
+	email = munikes@members.fsf.org
+[alias]
+    ci = commit
+	st = status
+	br = branch
+	co = checkout
+[push]
+	default = simple
