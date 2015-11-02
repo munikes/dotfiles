@@ -126,6 +126,21 @@ map <leader>j :RopeGotoDefinition<CR>
 
 " Rename whatever the cursor is on (including references to it)
 map <leader>r :RopeRename<CR>
+
+"------  Buffer Navigation  ------
+" Ctrl Left/h & Right/l cycle between buffers
+noremap <silent> <Leader>h :bprev<CR>
+noremap <silent> <Leader>l :bnext<CR>
+
+" <Leader>q Closes the current buffer
+nnoremap <silent> <Leader>q :Bclose<CR>
+
+" <Leader>Q Closes the current window
+nnoremap <silent> <Leader>Q <C-w>c
+
+" <Leader>Ctrl+q Force Closes the current buffer
+nnoremap <silent> <Leader><C-q> :Bclose!<CR>
+
 " ==========================================================
 " Pathogen - Allows us to organize our vim plugins
 " ==========================================================
@@ -146,7 +161,8 @@ set background=dark           " We are using dark background in vim
 set title                     " show title in console title bar
 set wildmenu                  " Menu completion in command mode on <Tab>
 set wildmode=full             " <Tab> cycles between all matching choices.
-set hidden                    " buffers do not need to be saved 
+set hidden                    " buffers do not need to be saved
+set relativenumber
 
 " don't bell or blink
 set noerrorbells
