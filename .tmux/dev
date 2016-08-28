@@ -38,11 +38,11 @@ set -g base-index 1
 
 
 # #dev
-new -s dev -n bash -c ~/trabajo/deevop/blog-tutorial 
+new -s dev -n bash -c ~/trabajo/deevop/blog-tutorial
 neww -n logs -c ~/trabajo/deevop/blog-tutorial 'tail -f fuel/app/logs/$(date +%Y)/$(date +%m)/$(date +%d).php'
-neww -n git -c ~/trabajo/deevop/blog-tutorial 
+neww -n git -c ~/trabajo/deevop/blog-tutorial
 neww -n remote 'ssh deevop.dev'
 neww -n oil 'cd ~/trabajo/deevop/blog-tutorial; oil console'
 splitw -h -p 50 -t 3 'ssh deevop.dev'
-selectw -t 1 
+selectw -t 1
 #
