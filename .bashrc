@@ -133,3 +133,6 @@ alias tib_kb='setxkbmap -option grp:switch,grp:ctrl_shift_toggle,grp_led:scroll 
 alias tib_kb_only='setxkbmap -layout "cn" -variant "tib"'
 alias es_kb='setxkbmap -layout "es"'
 alias cole_kb='setxkbmap -option grp:switch,ctrl_shift_toggle,grp_led:scroll -layout "us(colemak),es"'
+
+# Python Django settings
+export PYTHONSTARTUP=~/.pythonrc

@@ -10,8 +10,9 @@
 #    print 'no imported django settings'
 try:
     import os
+    import django
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
-    from django.conf import settings
+    django.setup()
     print 'imported django settings'
 except:
     print 'no imported django settings'
