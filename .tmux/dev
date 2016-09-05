@@ -1,3 +1,7 @@
+# Variables
+PATH_PROJECT="/home/diego/workspace/quiniela-openshift"
+PROJECT_NAME="quiniela"
+
 # Start numbering at 1
 set -g base-index 1
 
@@ -38,11 +42,11 @@ set -g base-index 1
 
 
 # #dev
-new -s dev -n bash -c ~/trabajo/deevop/blog-tutorial
-neww -n logs -c ~/trabajo/deevop/blog-tutorial 'tail -f fuel/app/logs/$(date +%Y)/$(date +%m)/$(date +%d).php'
-neww -n git -c ~/trabajo/deevop/blog-tutorial
-neww -n remote 'ssh deevop.dev'
-neww -n oil 'cd ~/trabajo/deevop/blog-tutorial; oil console'
-splitw -h -p 50 -t 3 'ssh deevop.dev'
-selectw -t 1
+new -s dev -n VIM -c $PATH_PROJECT
+neww -n bash -c $PATH_PROJECT
+neww -n remote 'rhc ssh $PROJECT_NAME'
+neww -n bpython 'source $PATH_PROJECT/env/bin/activate; cd $PATH_PROJECT/wsgi/$PROJECT_NAME; bpython'
+neww -n django 'source $PATH_PROJECT/env/bin/activate; cd $PATH_PROJECT/wsgi/$PROJECT_NAME; export DEBUG=True; bash -i'
+#splitw -h -p 50 -t 3 'rhc ssh $PROJECT_NAME'
+#selectw -t 1
 #
