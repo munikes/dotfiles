@@ -129,6 +129,7 @@ source ~/.bash-git-prompt/gitprompt.sh
 
 # Aliases
 alias tib='urxvt -fn "xft:Tibetan Machine Uni" -fb "8x16"'
+alias es='urxvt'
 alias tib_kb='setxkbmap -option grp:switch,grp:ctrl_shift_toggle,grp_led:scroll -layout "es,cn" -variant ",tib"'
 alias tib_kb_only='setxkbmap -layout "cn" -variant "tib"'
 alias es_kb='setxkbmap -layout "es"'
