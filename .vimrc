@@ -323,3 +323,22 @@ if filereadable($VIRTUAL_ENV . '/.vimrc')
 endif
 
 set colorcolumn=79
+
+" Set tags
+set autochdir
+set tags+=./tags,tags;
+
+" the working directory is always the one containing the current file
+set autochdir
+
+" Syntactic checker from Solidity
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+"let g:syntastic_solidity_checkers = ['solc', 'solhint', 'solium']
+Plug 'tomlion/vim-solidity'
